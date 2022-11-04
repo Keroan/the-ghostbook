@@ -1,0 +1,160 @@
+<app-index-navbar></app-index-navbar>
+<section class="header relative pt-16 items-center flex h-screen max-h-860-px">
+  <div class="container mx-auto items-center flex flex-wrap">
+    <div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
+      <div class="pt-32 sm:pt-0">
+        <h2 class="font-semibold text-4xl text-blueGray-600">
+          Ghostbook - Le réseau des beaux Ghosts
+        </h2>
+        <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
+          Vous avez exclu de votre vie sans raison un être cher ? Vous vous êtes comporté comme un fantôme à son égard ?
+          Retrouvez-vous ici entre fantômes !
+          Ghoster n'est pas une fin en soi.
+        </p>
+        <div class="mt-12">
+          <a [routerLink]="['/auth/register']"
+            class="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-red-600 active:bg-red-700 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150">
+            S'inscrire
+          </a>
+          <a [routerLink]="['/auth/login']"
+            class="ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150">
+            Se connecter
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <img class="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px"
+    src="assets/img/pattern_angular.png" alt="..." />
+</section>
+
+<section class="mt-48 md:mt-40 pb-40 relative bg-blueGray-100">
+  <div class="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20" style="transform: translateZ(0)">
+    <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+      version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+      <polygon class="text-blueGray-100 fill-current" points="2560 0 2560 100 0 100"></polygon>
+    </svg>
+  </div>
+  <div class="container mx-auto">
+    <div class="flex flex-wrap items-center">
+      <div class="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32">
+        <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-red-600">
+          <img alt="ghostbook"
+            src="assets/img/ghostbook.jpg"
+            class="w-full align-middle rounded-t-lg" />
+          <blockquote class="relative p-8 mb-4">
+            <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
+              class="absolute left-0 w-full block h-95-px -top-94-px">
+              <polygon points="-30,95 583,95 583,65" class="text-red-600 fill-current"></polygon>
+            </svg>
+            <h4 class="text-xl font-bold text-white">
+              Quel genre de fantôme êtes-vous ?
+            </h4>
+            <p class="text-md font-light mt-2 text-white">
+              Ghoster une personne n'est pas anodin et nécessite aucun courage. Découvrez quel rôle vous jouez en tant que fantôme.
+            </p>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="w-full md:w-6/12 px-4">
+        <div class="flex flex-wrap">
+          <div class="w-full md:w-6/12 px-4">
+            <div class="relative flex flex-col mt-4">
+              <div class="px-4 py-5 flex-auto">
+                <div
+                  class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                  <fa-icon [icon]="faGhost"></fa-icon>
+                </div>
+                <h6 class="text-xl mb-1 font-semibold">Le Guerrier</h6>
+                <p class="mb-4 text-blueGray-500">
+                  Il n'arrête pas de ghoster. Pour lui, c'est une lutte au quotidien. <br /><b>Son objectif : un répertoire de contact toujours vide</b>.
+                </p>
+              </div>
+            </div>
+            <div class="relative flex flex-col min-w-0">
+              <div class="px-4 py-5 flex-auto">
+                <div
+                  class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                  <fa-icon [icon]="faGhost"></fa-icon>
+                </div>
+                <h6 class="text-xl mb-1 font-semibold">
+                  L'Alchimiste
+                </h6>
+                <p class="mb-4 text-blueGray-500">
+                  Il ghoste tout en cherchant un moyen exceptionnel de le faire sans conséquence. <br /><b>Son objectif : ghoster sans scrupule</b>.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-6/12 px-4">
+            <div class="relative flex flex-col min-w-0 mt-4">
+              <div class="px-4 py-5 flex-auto">
+                <div
+                  class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                  <fa-icon [icon]="faGhost"></fa-icon>
+                </div>
+                <h6 class="text-xl mb-1 font-semibold">L'Espion</h6>
+                <p class="mb-4 text-blueGray-500">
+                  Il ghoste mais prend des nouvelles grâce aux réseaux sociaux. <br/><b>Son objectif : tout voir sans être vu</b>.
+                </p>
+              </div>
+            </div>
+            <div class="relative flex flex-col min-w-0">
+              <div class="px-4 py-5 flex-auto">
+                <div
+                  class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                  <fa-icon [icon]="faGhost"></fa-icon>
+                </div>
+                <h6 class="text-xl mb-1 font-semibold">Le Sorcier / L'Enchanteur</h6>
+                <p class="mb-4 text-blueGray-500">
+                  Il ensorcelle son monde et disparaît par magie. <br /><b>Son objectif : développer son don à ghoster</b>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="pb-16 bg-blueGray-200 relative pt-32">
+  <div class="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20" style="transform: translateZ(0)">
+    <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+      version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+      <polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon>
+    </svg>
+  </div>
+
+  <div class="container mx-auto">
+    <div class="flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-64 py-16 px-12 relative z-10">
+      <div class="w-full text-center lg:w-8/12">
+        <p class="text-4xl text-center">
+          <span role="img" aria-label="love"> 👻 </span>
+        </p>
+        <h3 class="font-semibold text-3xl">Plus personne à ghoster ?</h3>
+        <p class="text-blueGray-500 text-lg leading-relaxed mt-4 mb-4">
+          Faites-vous plaisir, trouver d'autres fantomes et ghoster-les à votre tour.<br/>
+          Aucun scrupule, ils ont déjà ghosté !
+        </p>
+        <div class="sm:block flex flex-col mt-10">
+          <a [routerLink]="['/auth/register']"
+            class="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-red-600 active:bg-red-700 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150">
+            S'inscrire
+          </a>
+          <a [routerLink]="['/auth/login']"
+            class="sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150">
+            <span>Se connecter</span>
+          </a>
+        </div>
+        <div class="text-center mt-16"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

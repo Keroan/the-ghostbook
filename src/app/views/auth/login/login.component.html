@@ -1,0 +1,57 @@
+<div class="container mx-auto px-4 h-full">
+  <div class="flex content-center items-center justify-center h-full">
+    <div class="w-full lg:w-4/12 px-4">
+      <div
+        class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0"
+      >
+        <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
+          <div class="text-blueGray-700 text-center mb-3 pt-4 font-bold">
+            Ghost save the <span class="line-through">queen</span> king... <br />Identifiez-vous !
+          </div>
+          <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
+            <div class="relative w-full mb-3">
+              <mat-form-field>
+                <input matInput name="email" ngModel type="email" placeholder="E-Mail" #emailInput="ngModel" required email>
+                <mat-error *ngIf="emailInput.invalid">Fantôme, votre email est invalide</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="relative w-full mb-3">
+              <mat-form-field>
+                <input type="password" name="password" ngModel matInput placeholder="Mot de passe" #passwordInput="ngModel" required>
+                <mat-error *ngIf="passwordInput.invalid">Fantôme, votre mot de passe est invalide</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div *ngIf="isLoginFailed" class="text-white px-6 py-4 border-0 rounded relative mb-4 bg-red-500">
+              <span class="inline-block align-middle">
+                {{errorMessage}}
+              </span>
+            </div>
+
+            <div class="text-center mt-6">
+              <button
+                class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                type="submit"
+              >
+                Se connecter
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="flex flex-wrap mt-6 relative">
+        <div class="w-1/2">
+          <div class="text-blueGray-200">
+            <small>Mot de passe oublié ? Dommage, il vous a ghosté</small>
+          </div>
+        </div>
+        <div class="w-1/2 text-right">
+          <a [routerLink]="['/auth/register']" class="text-blueGray-200">
+            <small>Créer un compte</small>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

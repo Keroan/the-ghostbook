@@ -1,0 +1,99 @@
+<div class="container mx-auto px-4 h-full">
+  <div class="flex content-center items-center justify-center h-full">
+    <div class="w-full lg:w-6/12 px-4">
+      <div
+        class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0"
+      >
+        <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
+          <div class="text-blueGray-700 text-center mb-3 pt-4 font-bold">
+            Ghost, Ghost, Ghost... I'm looking for a good time...
+            <br />Inscrivez-vous !
+          </div>
+          <form (submit)="onRegister(registerForm)" #registerForm="ngForm">
+            <div class="relative w-full mb-3">
+              <mat-form-field>
+                <input matInput name="name" ngModel type="text" placeholder="Nom" #nameInput="ngModel" required />
+                <mat-error *ngIf="nameInput.invalid">Un fantôme a toujours un petit nom</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="relative w-full mb-3">
+              <mat-form-field>
+                <mat-label>Rôle</mat-label>
+                <select name="role" matNativeControl ngModel #roleInput="ngModel" required>
+                  <option value="alchimiste">Alchimiste</option>
+                  <option value="enchanteur">Enchanteur</option>
+                  <option value="espion">Espion</option>
+                  <option value="guerrier">Guerrier</option>
+                  <option value="sorcier">Sorcier</option>
+                </select>
+                <mat-error *ngIf="roleInput.invalid">
+                  On a tous un rôle...
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="relative w-full mb-3">
+              <mat-form-field>
+                <input
+                  matInput
+                  name="email"
+                  ngModel
+                  type="email"
+                  placeholder="E-Mail"
+                  #emailInput="ngModel"
+                  required
+                  email
+                />
+                <mat-error *ngIf="emailInput.invalid"
+                  >Fantôme, votre email est invalide</mat-error
+                >
+              </mat-form-field>
+            </div>
+
+            <div class="relative w-full mb-3">
+              <mat-form-field>
+                <input
+                  type="password"
+                  name="password"
+                  ngModel
+                  matInput
+                  placeholder="Mot de passe"
+                  #passwordInput="ngModel"
+                  required
+                />
+                <mat-error *ngIf="passwordInput.invalid"
+                  >Un mot de passe ne peut être fantôme</mat-error
+                >
+              </mat-form-field>
+            </div>
+
+            <div
+              *ngIf="isSignUpFailed"
+              class="text-white px-6 py-4 border-0 rounded relative mb-4 bg-red-500"
+            >
+              <span class="inline-block align-middle">
+                {{ errorMessage }}
+              </span>
+            </div>
+
+            <div class="text-center mt-6">
+              <button
+                class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                type="submit"
+              >
+                Créer un compte
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="flex flex-wrap mt-6 relative">
+        <div class="w-1/2"></div>
+        <div class="w-1/2 text-right">
+          <a [routerLink]="['/auth/login']" class="text-blueGray-200">
+            <small>J'ai déjà un compte</small>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
